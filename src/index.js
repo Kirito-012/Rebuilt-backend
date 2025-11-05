@@ -6,6 +6,7 @@ import categoriesRouter from './routes/categories.js'
 import blogsRouter from './routes/blogs.js'
 import mainStoriesRouter from './routes/mainStories.js'
 import trendingStoriesRouter from './routes/trendingStories.js'
+import newsCarouselRouter from './routes/newsCarousel.js'
 
 const app = express()
 
@@ -27,6 +28,7 @@ app.use('/api/categories', categoriesRouter)
 app.use('/api/blogs', blogsRouter)
 app.use('/api/main-stories', mainStoriesRouter)
 app.use('/api/trending-stories', trendingStoriesRouter)
+app.use('/api/news-carousel', newsCarouselRouter)
 
 mongoose
 	.connect(ENV.MONGODB_URI)
